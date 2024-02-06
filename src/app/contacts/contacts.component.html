@@ -1,0 +1,17 @@
+<app-sidebar></app-sidebar>
+<div class="content">
+  <app-navbar></app-navbar>
+  <div class="card-container" style="display: flex; flex-wrap: wrap;">
+    <div *ngFor="let c of contacts" style="margin: 10px;">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align: center;">{{c.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary"><i class="bi bi-envelope-fill"></i> {{c.email}}</h6>
+          <h6 class="card-subtitle mb-2 text-body-secondary"><i class="bi bi-telephone-fill"></i> {{c.phone}}</h6>
+          <p class="card-text">{{c.message}}</p>
+          <p class="card-text">i heard about you from: {{c.source}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
